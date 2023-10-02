@@ -52,7 +52,7 @@ const MyAccount = () => {
       formData.append("image", file);
 
       const response = await fetch(
-        `http://localhost:4000/saveRecruiterPhoto/${userId}`,
+        `https://api-connectingids.vercel.app/saveRecruiterPhoto/${userId}`,
         {
           method: "POST",
           body: formData,
@@ -77,7 +77,7 @@ const MyAccount = () => {
   async function getUserAccountInfo() {
     try {
       const response = await fetch(
-        `http://localhost:4000/userAccount/${userId}`,
+        `https://api-connectingids.vercel.app/userAccount/${userId}`,
         {
           method: "GET",
           headers: {
@@ -130,7 +130,7 @@ const MyAccount = () => {
       };
 
       const response = await fetch(
-        `http://localhost:4000/updateUser/${userId}`,
+        `https://api-connectingids.vercel.app/updateUser/${userId}`,
         {
           method: "PUT",
           headers: {

@@ -279,14 +279,17 @@ function CandidateProfile({ data }) {
       };
       console.warn(data);
 
-      const response = await fetch(`http://localhost:4000/createProfile`, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ data }),
-      });
+      const response = await fetch(
+        `https://api-connectingids.vercel.app/createProfile`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ data }),
+        }
+      );
 
       if (response.ok) {
         const apiData = await response.json();

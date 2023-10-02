@@ -37,7 +37,7 @@ const Accountbtn = () => {
       formData.append("image", file);
 
       const response = await fetch(
-        `http://localhost:4000/savePhoto/${candidateId}`,
+        `https://api-connectingids.vercel.app/savePhoto/${candidateId}`,
         {
           method: "POST",
           body: formData,
@@ -61,7 +61,7 @@ const Accountbtn = () => {
   async function getUserAccountInfo() {
     try {
       const response = await fetch(
-        `http://localhost:4000/userAccount/${userId}`,
+        `https://api-connectingids.vercel.app/userAccount/${userId}`,
         {
           method: "GET",
           headers: {

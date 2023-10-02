@@ -37,7 +37,7 @@ function Header() {
   async function getUserAccountInfo() {
     try {
       const response = await fetch(
-        `http://localhost:4000/userAccount/${userId}`,
+        `https://api-connectingids.vercel.app/userAccount/${userId}`,
         {
           method: "GET",
           headers: {

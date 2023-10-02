@@ -75,13 +75,16 @@ const AllCandidatesData = () => {
 
   async function showAllcandidates() {
     try {
-      const response = await fetch(`http://localhost:4000/getAllProfiles`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://api-connectingids.vercel.app/getAllProfiles`,
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (response.ok) {
         const candidatesData = await response.json();
         console.warn(candidatesData?.data);

@@ -47,7 +47,7 @@ function CompanyProfile() {
   async function getUserAccountInfo() {
     try {
       const response = await fetch(
-        `http://localhost:4000/getProfileById/${userId}`,
+        `https://api-connectingids.vercel.app/getProfileById/${userId}`,
         {
           method: "GET",
           headers: {
@@ -94,7 +94,7 @@ function CompanyProfile() {
   async function getCompanyData() {
     try {
       const response = await fetch(
-        `http://localhost:4000/getCompanyProfile/${recruiterId}`,
+        `https://api-connectingids.vercel.app/getCompanyProfile/${recruiterId}`,
         {
           method: "GET",
           headers: {
@@ -155,7 +155,7 @@ function CompanyProfile() {
       formData.append("companyPhoto", selectedImage);
 
       const response = await fetch(
-        `http://localhost:4000/companyProfile/${recruiterId}`,
+        `https://api-connectingids.vercel.app/companyProfile/${recruiterId}`,
         {
           method: "POST",
           body: formData,
